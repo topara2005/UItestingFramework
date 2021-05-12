@@ -26,17 +26,17 @@ namespace TestLibrary.UITest
         private void DeleteTestRows()
         {
             string delStatePatoPa = "delete from T_Auto_pa where dsc_auto_pa like 'test%'";
-            var delete1 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_PRIM_DIAG pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete2 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_SECD_DIAG pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete3 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_PDL pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete4 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_STEP_THPY_1 pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete5 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_STEP_THPY_2 pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
+            var delete1 = @"";
+            var delete2 = @")";
+            var delete3 = @"DE like 'test%')";
+            var delete4 = @"'test%')";
+            var delete5 = @"where dsc_auto_pa like 'test%')";
 
 
-            var delete6 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_TXNMY pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete7 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_AGE pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete8 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_GRNDFTR pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
-            var delete9 = @"DELETE (SELECT pf.* FROM T_AUTO_PA_COMOR_DIAG pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%')";
+            var delete6 = @"')";
+            var delete7 = @"D like 'test%')";
+            var delete8 = @" 'test%')";
+            var delete9 = @" like 'test%')";
 
 
 
@@ -156,7 +156,7 @@ namespace TestLibrary.UITest
      )]
         public void Test_Table_PDL_Exists()
         {
-            string query = @"SELECT count(*) FROM AIM.T_AUTO_PA_PDL";
+            string query = @"";
             var errorcurred = false;
             try
             {
@@ -1066,7 +1066,7 @@ RequirementNumber = "BE1SS72.01"
         private bool CheckForRecordCount(string tableName)
         {
 
-            string delStatePatoPa = $"SELECT count(*) FROM {tableName} pf INNER JOIN T_AUTO_PA pr ON pf.sak_auto_pa = pr.sak_auto_pa  where dsc_auto_pa like 'test%'";
+            string delStatePatoPa = $"to_pa like 'test%'";
             var count = 0;
 
             try

@@ -21,8 +21,7 @@ namespace TestLibrary.UITest
     {
         MainPage mainPage = null;
          string medicareId =string.Empty ;//"979133098C"
-        string query = @"SELECT ID_MEDICARE_CMS as Medicare, t_buy_tbq.sak_recip_applied,   ID_MEDICAID, NAM_FIRST_CMS, NUM_SSN, sak_recip
-FROM t_buy_tbq  WHERE ID_MEDICARE_CMS is not null  and sak_recip_applied!=-1 and ROWNUM <= 1";
+        string query = @"";
 
         public TestCaseCO4646() : base(new LoginScreen())
         {
