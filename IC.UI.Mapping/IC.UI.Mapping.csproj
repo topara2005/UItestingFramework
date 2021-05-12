@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C001F87-C7F8-418F-A1D8-2A72873D4457}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IC.UI.Mapping</RootNamespace>
+    <AssemblyName>IC.UI.Mapping</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.0" />
+    <PackageReference Include="IcTestAutomation">
+      <Version>0.0.9</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="OpenXmlPowerTools" Version="4.5.3.2" />
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.26.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>80.0.3987.10600</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.IEDriver">
+      <Version>3.150.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.MicrosoftDriver">
+      <Version>17.17134.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.7.0" />
+    <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PA\DurPluAgePanel.cs" />
+    <Compile Include="PA\DurPlusCoMorbidPanel.cs" />
+    <Compile Include="PA\DurPlusGrandFather.cs" />
+    <Compile Include="PA\DurPlusTaxonomyPanel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BendexInfoPanelPage.cs" />
+    <Compile Include="BuyIn\BuyInPage.cs" />
+    <Compile Include="BuyIn\TBQIformationPanelPage.cs" />
+    <Compile Include="BuyIn\TBQSearchPanelPage.cs" />
+    <Compile Include="MiniSearch\DiagnosisMiniSearch.cs" />
+    <Compile Include="MiniSearch\DiagnosisTypeMiniSearch.cs" />
+    <Compile Include="MiniSearch\DurPlusCodeMiniSearch.cs" />
+    <Compile Include="LoginPage.cs" />
+    <Compile Include="LoginPageUIMapping.cs" />
+    <Compile Include="MainPage.cs" />
+    <Compile Include="PA\DurDiagnosisPrimaryPanel.cs" />
+    <Compile Include="PA\DurDiagnosisSecondaryPanel.cs" />
+    <Compile Include="PA\DurPDLPanel.cs" />
+    <Compile Include="PA\DurPlusBaseInfoPanel.cs" />
+    <Compile Include="PA\DURPlusInfoPanelPage.cs" />
+    <Compile Include="PA\DURPlusPanelSearchPage.cs" />
+    <Compile Include="PA\DurStepTher1panel.cs" />
+    <Compile Include="PA\DurStepTher2Panel.cs" />
+    <Compile Include="MiniSearch\ProductNDCTypeMinSeachPanel.cs" />
+    <Compile Include="MiniSearch\PublicHealthProgramMiniSearch.cs" />
+    <Compile Include="MiniSearch\StepTherapyCriteriaMiniSeacrh.cs" />
+    <Compile Include="MiniSearch\TaxonomyMiniSearch.cs" />
+    <Compile Include="MiniSearch\TaxonomyTypeMiniSearch.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
